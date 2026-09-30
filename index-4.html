@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moslem Takaful | Protection with Purpose</title>
+<meta name="description" content="Moslem Takaful — mutual protection guided by Sharia principles.">
+<style>
+:root{
+  --bg:#071b16; --bg2:#0c2821; --cream:#f5efe2; --muted:#c8c0ae;
+  --gold:#d6b46a; --line:rgba(214,180,106,.25); --card:rgba(255,255,255,.045);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;background:linear-gradient(45deg,transparent 48%,rgba(214,180,106,.10) 49%,transparent 50%),linear-gradient(-45deg,transparent 48%,rgba(214,180,106,.07) 49%,transparent 50%);background-size:90px 90px;animation:patternMove 24s linear infinite}
+@keyframes patternMove{to{background-position:180px 180px}}
+body{
+  font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--cream);
+  line-height:1.7;overflow-x:hidden;
+}
+body::after{content:"";position:fixed;width:380px;height:380px;border-radius:50%;right:-170px;top:12%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(214,180,106,.13),transparent 68%);filter:blur(8px);animation:orb 9s ease-in-out infinite alternate}
+@keyframes orb{from{transform:translate3d(0,0,0)}to{transform:translate3d(-70px,80px,0)}}
+.container{width:min(1100px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:10;background:rgba(7,27,22,.82);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)
+}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;letter-spacing:2px;color:var(--gold);animation:logoGlow 4s ease-in-out infinite}
+@keyframes logoGlow{50%{text-shadow:0 0 18px rgba(214,180,106,.35)}}
+nav a{color:var(--cream);text-decoration:none;margin-left:24px;font-size:14px}
+.hero{min-height:88vh;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;left:50%;top:50%;border:1px solid rgba(214,180,106,.18);transform:translate(-50%,-50%) rotate(45deg);pointer-events:none}
+.hero::before{width:360px;height:360px;animation:diamond 18s linear infinite}
+.hero::after{width:520px;height:520px;border-radius:18px;animation:diamondReverse 26s linear infinite}
+@keyframes diamond{to{transform:translate(-50%,-50%) rotate(405deg)}}
+@keyframes diamondReverse{to{transform:translate(-50%,-50%) rotate(-315deg)}}
+.hero-content{max-width:850px;margin:auto;position:relative;z-index:1}
+.eyebrow{color:var(--gold);letter-spacing:4px;font-size:12px;text-transform:uppercase;margin-bottom:20px;animation:fadeUp .9s both}
+h1{font-size:clamp(42px,8vw,78px);line-height:1.05;margin-bottom:22px;animation:fadeUp 1s .1s both}
+h2{font-size:clamp(30px,5vw,48px);line-height:1.15;margin-bottom:18px}
+h3{font-size:20px;margin-bottom:10px}
+.gold{color:var(--gold)}
+.lead{font-size:19px;color:var(--muted);max-width:700px;margin:0 auto 30px}
+.btn{
+  display:inline-block;padding:13px 24px;border:1px solid var(--gold);border-radius:30px;
+  color:var(--cream);text-decoration:none;margin:5px;font-size:14px
+}
+.btn.primary{background:var(--gold);color:var(--bg);font-weight:700}
+section{padding:90px 0;border-top:1px solid rgba(255,255,255,.06)}
+.center{text-align:center}
+.section-lead{color:var(--muted);max-width:720px;margin:0 auto 40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{
+  background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;
+  padding:28px
+}
+.icon{font-size:25px;color:var(--gold);margin-bottom:12px}
+.card p{color:var(--muted);font-size:15px}
+.quote{
+  max-width:850px;margin:35px auto 0;padding:35px;border-left:2px solid var(--gold);
+  background:rgba(255,255,255,.03);text-align:center
+}
+.arabic{font-size:25px;line-height:2.1;direction:rtl;margin-bottom:16px}
+.translation{color:var(--muted);font-style:italic}
+.tagline{font-size:clamp(25px,4vw,42px);font-weight:600;line-height:1.25;max-width:800px;margin:25px auto;animation:fadeUp 1s .2s both}
+.hero .lead{animation:fadeUp 1s .3s both}.hero .btn{animation:fadeUp 1s .45s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
+.card{transition:transform .4s ease,border-color .4s ease,background .4s ease}.card:hover{transform:translateY(-8px);border-color:rgba(214,180,106,.42);background:rgba(255,255,255,.065)}
+.btn{transition:transform .3s ease,box-shadow .3s ease}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.22)}
+footer{padding:35px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:750px){
+  nav a{display:none}.grid,.grid4{grid-template-columns:1fr}
+  section{padding:65px 0}.hero{min-height:80vh}.lead{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="logo">MOSLEM TAKAFUL</div>
+    <div>
+      <a href="#takaful">Takaful</a>
+      <a href="#principles">Principles</a>
+      <a href="#life">Life</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">Mutual Protection • Sharia Principles</div>
+    <h1>Protection with <span class="gold">Purpose.</span></h1>
+    <p class="tagline">Assurance with Principles.</p>
+    <p class="lead">
+      Ikhtiar menjaga jiwa dan masa depan melalui semangat saling menolong,
+      tanggung jawab, dan prinsip-prinsip syariah.
+    </p>
+    <a class="btn primary" href="#takaful">Discover Takaful</a>
+    <a class="btn" href="#contact">Contact</a>
+  </div>
+</header>
+
+<section id="takaful" class="reveal">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">What is Takaful?</div>
+      <h2>Saling Menolong dalam Menghadapi Risiko</h2>
+      <p class="section-lead">
+        Takaful berangkat dari semangat <b>ta'awun</b>: saling membantu dan
+        berbagi tanggung jawab ketika menghadapi risiko kehidupan.
+      </p>
+    </div>
+    <div class="quote">
+      <div class="arabic">وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ</div>
+      <p>“Dan tolong-menolonglah kamu dalam kebajikan dan ketakwaan.”</p>
+      <p class="translation">QS. Al-Ma'idah: 2</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Why Takaful?</div>
+      <h2>Protection with Meaning</h2>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="icon">01</div><h3>Mutual Assistance</h3><p>Saling membantu dalam menghadapi risiko dan membangun kepedulian bersama.</p></div>
+      <div class="card"><div class="icon">02</div><h3>Sharia Principles</h3><p>Berorientasi pada prinsip transaksi dan pengelolaan dana yang sesuai syariah.</p></div>
+      <div class="card"><div class="icon">03</div><h3>Financial Protection</h3><p>Membantu menjaga keberlangsungan finansial ketika risiko kehidupan terjadi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="principles" class="reveal">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Sharia Principles</div>
+      <h2>Free from Riba, Maysir &amp; Gharar</h2>
+      <p class="section-lead">Prinsip syariah menjadi landasan dalam membangun mekanisme perlindungan yang transparan dan bertanggung jawab.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>No Riba</h3><p>Menghindari transaksi yang mengandung riba sesuai ketentuan syariah.</p></div>
+      <div class="card"><h3>No Maysir</h3><p>Menghindari unsur perjudian atau spekulasi yang bersifat untung-untungan.</p></div>
+      <div class="card"><h3>No Gharar</h3><p>Menghindari ketidakjelasan yang dilarang dalam akad dan transaksi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Sharia Governance</div>
+      <h2>Dewan Pengawas Syariah</h2>
+      <p class="section-lead">
+        Operasional takaful diawasi melalui mekanisme pengawasan syariah untuk
+        memastikan aktivitas berjalan sesuai prinsip-prinsip syariah.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="life" class="reveal">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Focus on Life</div>
+      <h2>Life Is an <span class="gold">Amanah.</span></h2>
+      <p class="section-lead">
+        Kita tidak mengetahui apa yang akan terjadi esok hari, tetapi kita dapat
+        mempersiapkan diri dengan ikhtiar yang bertanggung jawab.
+      </p>
+    </div>
+    <div class="quote">
+      <div class="arabic">مَثَلُ الْمُؤْمِنِينَ فِي تَوَادِّهِمْ وَتَرَاحُمِهِمْ وَتَعَاطُفِهِمْ، مَثَلُ الْجَسَدِ</div>
+      <p>“Perumpamaan orang-orang mukmin dalam saling mencintai, menyayangi, dan mengasihi adalah seperti satu tubuh.”</p>
+      <p class="translation">HR. Muslim</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="container center">
+    <div class="eyebrow">Moslem Takaful</div>
+    <h2>Prepare Today. Protect What Matters.</h2>
+    <p class="section-lead">Protection becomes meaningful when it is built on mutual care.</p>
+    <a class="btn primary" href="https://wa.me/6287751660874?text=Assalamu%27alaikum%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20Moslem%20Takaful." target="_blank">Contact via WhatsApp</a>
+  </div>
+</section>
+
+<footer class="reveal">
+  <div class="container center">
+    © 2026 Moslem Takaful. Built around mutual care and Sharia principles.
+  </div>
+</footer>
+<script>
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
